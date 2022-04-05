@@ -19,6 +19,7 @@ $me = "267593079";
 
 function send_message($text) {
     $url = $website . "/sendMessage?chat_id=" . $me . "?text=" . $text;
+    file_get_contents($url);
 }
 
 
