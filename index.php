@@ -16,7 +16,7 @@ if($update) {
 }
 
 function send_message($chat, $text) {
-    $url = $website . "/sendMessage?chat_id=" . $chat . "?text=" . $text;
+    $url = "https://api.telegram.org/bot5195372792:AAGTekbGeYlqDzzHI-BbIrXfxMY8j0_jSM0/sendMessage?chat_id=$chat&text=$text";
     file_get_contents($url);
 }
 
@@ -27,3 +27,4 @@ if($message == "oi") {
 
 
 
+echo $url;
