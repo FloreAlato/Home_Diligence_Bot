@@ -9,6 +9,10 @@ $content = file_get_contents('php://input');
 
 $update = json_decode($content, true);
 
+$url = "";
+$message = "";
+$me = "";
+
 
 if($update) {
     $chatID = $update["message"]["from"]["id"];
@@ -22,9 +26,9 @@ function send_message($chat, $text) {
 
 
 if($message == "oi") {
-    send_message($chatID, "Fatto");
+    send_message($chatID, "$chatID says: $message");
 }
 
 
-
+//send_message($me)
 echo $url;
