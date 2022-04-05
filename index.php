@@ -15,16 +15,14 @@ if($update) {
     $message = $update["message"]["text"];
 }
 
-$me = "267593079";
-
-function send_message($text) {
-    $url = $website . "/sendMessage?chat_id=" . $me . "?text=" . $text;
+function send_message($chat, $text) {
+    $url = $website . "/sendMessage?chat_id=" . $chat . "?text=" . $text;
     file_get_contents($url);
 }
 
 
 if($message == "oi") {
-    send_message("Fatto");
+    send_message($chatID, "Fatto");
 }
 
 
