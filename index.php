@@ -1,9 +1,7 @@
 <?php
 
 
-$file = fopen("token.bin", "rb");
-$token = fread($file, 46);
-fclose($file);
+$token = "5195372792:AAGTekbGeYlqDzzHI-BbIrXfxMY8j0_jSM0";
 
 $website = "https://api.telegram.org/bot" . $token;
 
@@ -17,6 +15,7 @@ if($update) {
     $message = $update["message"]["text"];
 }
 
+$me = "267593079";
 
 function send_message($text) {
     $url = $website . "/sendMessage?chat_id=" . $me . "?text=" . $text;
@@ -29,4 +28,3 @@ if($message == "oi") {
 
 
 
-$me = "267593079";
