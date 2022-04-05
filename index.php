@@ -11,7 +11,7 @@ $update = json_decode($content, true);
 
 $url = "";
 $message = "";
-$me = "";
+$me = "267593079";
 
 
 if($update) {
@@ -20,7 +20,7 @@ if($update) {
 }
 
 function send_message($chat, $text) {
-    $url = "https://api.telegram.org/bot5195372792:AAGTekbGeYlqDzzHI-BbIrXfxMY8j0_jSM0/sendMessage?chat_id=$chat&text=$text";
+    $url = "https://api.telegram.org/bot$token/sendMessage?chat_id=$chat&text=$text";
     file_get_contents($url);
 }
 
@@ -28,7 +28,3 @@ function send_message($chat, $text) {
 if($message == "oi") {
     send_message($chatID, "$chatID says: $message");
 }
-
-
-//send_message($me)
-echo $url;
