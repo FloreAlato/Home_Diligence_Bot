@@ -22,7 +22,7 @@ if($update) {
 }
 
 function send_message($chat, $text) {
-    $url = "$website/sendMessage?chat_id=$chat&text=$text";
+    $url = $website . "/sendMessage?chat_id=$chat&text=$text";
     file_get_contents($url);
 }
 
