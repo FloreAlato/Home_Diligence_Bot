@@ -26,6 +26,11 @@ function send_message($chat, $text) {
     file_get_contents($url);
 }
 
+function send_message_markup($chat, $text) {
+    $url = urlencode("https://api.telegram.org/bot5195372792:AAGTekbGeYlqDzzHI-BbIrXfxMY8j0_jSM0/sendMessage?chat_id=$chat&text=$text");
+    file_get_contents($url);
+}
+
 
 
 
@@ -41,5 +46,5 @@ if($message == "/start") {
 }
 
 if($message == "/comandi") {
-    send_message($chatID, urlencode("I comandi attivi sono:<br>/start - Avvio ed informazioni sul bot"));
+    send_message_markup($chatID, "I comandi attivi sono:<br>/start - Avvio ed informazioni sul bot<br>/comandi - Comandi attivi");
 }
