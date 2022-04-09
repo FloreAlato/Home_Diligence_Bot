@@ -27,6 +27,19 @@ function send_message($chat, $text) {
 }
 
 
+
+
+
+//comandi
+
 if($message == "oi") {
     send_message($chatID, "$chatID says: $message");
+}
+
+if($message == "/start") {
+    send_message($chatID, "Questo bot serve alle seguenti cose: ");
+}
+
+if($message == "/comandi") {
+    send_message($chatID, urlencode("I comandi attivi sono:<br>/start - Avvio ed informazioni sul bot"));
 }
